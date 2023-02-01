@@ -5,7 +5,7 @@ let contenedorBoton = document.querySelectorAll(".contenedor-boton");
 let contenedorLoader = document.querySelector(".contenedor-loader");
 let bolasLoader = document.querySelectorAll(".bola-loader");
 
-const url = "https://breakingbadapi.com/api/characters";
+const url = "https://thronesapi.com/api/v2/Characters";
 let personajes = [];
 
 botonStart.addEventListener("click", (e) => {
@@ -41,9 +41,6 @@ async function llamarPersonajes(){
         .then((res) => res.json())
         .then((res) => {
             personajes = res;
-            personajes.splice(13,1) // Elimino personaje sin imagen (Lydia)
-            personajes.splice(37,1) // Elimino personaje sin imagen (Holly)
-            personajes.splice(49) // Elimino personajes de Better Call Saul
             cargarPersonajes()
             cambiarBotones() 
         })
@@ -60,11 +57,11 @@ function cargarPersonajes(){
         card.innerHTML = 
         `<div class="personaje">
             <div class="contenedor-img">
-                <img src="${personaje.img}">
+                <img src="${personaje.imageUrl}">
             </div>
-            <h2>${personaje.name}</h2>
-            <h4>Apodo: ${personaje.nickname}</h4>
-            <h4>Intérprete: ${personaje.portrayed}</h4>        
+            <h2>${personaje.fullName}</h2>
+            <h4>House: ${personaje.family}</h4>
+            <h4>Títle: ${personaje.title}</h4>        
         </div>`
         
         cardConteiner.appendChild(card);

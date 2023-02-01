@@ -1,68 +1,36 @@
-@import url('//fonts.cdnfonts.com/css/heart-breaking-bad');
+/* @import url('//fonts.cdnfonts.com/css/heart-breaking-bad'); */
+@import url(//db.onlinewebfonts.com/c/97c4b25dc74e0ab045154e75a8fdd69d?family=Game+of+Thrones);
 
-*{
+* {
     margin: 0;
     padding: 0;
     justify-content: center;    
 }
 
-body{
-    font-family: 'Heart Breaking Bad', sans-serif;
+body {
+    font-family: 'Game of Thrones';
     height: 100%;
     width: 100%;
-    background: url(https://wallpapers.com/images/hd/breaking-bad-walter-and-jesse-80bjfb94bgadfr0p.jpg);
+    background: url(https://cdn.wallpapersafari.com/25/77/alEFWZ.jpg);
     background-size: cover;                                       
-    background-position: center;
+    background-position:center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-.home{
+.home {
     display: flex;
     overflow: hidden;
     flex-direction: column;
     margin: 3rem auto 2rem;
 }
 
-.home div{
+.home div {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
-.home div .titulo{
-    flex-direction: row;
-}
-
-.titulo .elemento{
-    display: inline-block;
-    color: #fff;
-    border: 2px #fff solid;
-    background-image: linear-gradient(to right, #46a08c,rgb(6, 87, 6));
-    width: 80px;
-    height: 80px;
-    font-family: sans-serif;
-    font-size: 60px;
-    font-size-adjust: .55;
-    text-align: center;
-}
-
-.titulo p{
-    display: flex;
-    font-family: inherit;
-    color: #fff;
-    font-size: 83px;
-    line-height: 1.12;
-    letter-spacing: 2px;
-    text-align: center;
-    font-size-adjust: .55;
-    padding-left: 3px;
-}
-
-.bad{
-    margin: -8px 1px 0 10px;
-}
-
-.contenedor-loader{
+.contenedor-loader {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -72,36 +40,37 @@ body{
     max-height: 30px;
 }
 
-.contenedor-loader div{
+.contenedor-loader div {
     width: 15px;
     height: 15px;
     border: #fff solid 1px;
     border-radius: 50%;
-    background: green;
+    background: #b6c9c5
+    ;
     animation: loader 0.7s cubic-bezier(0.10, 0.05, 0.22, 0.9) alternate infinite;
 }
 
-.contenedor-loader div:nth-child(2){
+.contenedor-loader div:nth-child(2) {
     animation-delay: 0.2s;
 }
 
-.contenedor-loader div:nth-child(3){
+.contenedor-loader div:nth-child(3) {
     animation-delay: 0.4s;
 }
 
-.contenedor-boton{
+.contenedor-boton {
     display: flex;
     justify-content: center;
-    margin: 2rem auto 1rem;
+    margin: 20rem auto 1rem;
 }
 
-#boton-start{
+#boton-start {
     margin: 15rem auto 0;
 }
 
 #boton-start,
-#boton-back{
-    background-color: green;
+#boton-back {  
+    background: linear-gradient(#46a08c, #0a1111);
     color: #fff;
     width: 120px;
     height: 40px;
@@ -109,25 +78,25 @@ body{
     border: 3px inset #fff;
     font-family: inherit;
     border-radius: 5px;
-    font-size: 30px;
+    font-size: 12px;
 }
 
 #boton-start:hover,
-#boton-back:hover{
+#boton-back:hover {
     text-decoration: none;
     cursor: pointer;     
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
-#contenedor-personajes{
+#contenedor-personajes {
     display: flex;
     flex-wrap: wrap;
 }
 
-.cardConteiner{
+.cardConteiner {
     display: flex;
     flex-direction: column-reverse;
     padding: 0; 
@@ -136,47 +105,47 @@ body{
     background-image: linear-gradient(rgb( 1, 24, 1), #0a1111);
 }
 
-.card{
+.card {
     background-color: #46a08c;
     border-radius: 3%;
-    background-image: linear-gradient(#0a1111, rgb(158, 187, 27),#0a1111);
+    background-image: linear-gradient(#0a1111, #46a08c,#0a1111);
     padding-bottom: 10px;
 }
 
-#contenedor-personajes div{
+#contenedor-personajes div {
     margin:  .5rem .5rem .5rem;
 }
 
-#contenedor-personajes .personaje{
+#contenedor-personajes .personaje {
     display: inline-block;
     margin: auto;
     width: 215px;
     height: 150px;    
 }
 
-.contenedor-img{
+.contenedor-img {
     overflow: hidden;
     width: 200px;
     height: 180%;
     border-radius: 5px;
     margin: 0 auto;
-    box-shadow: 0 0 6px 6px rgb(3, 44, 3);
+    box-shadow: 0 0 6px 6px #0a1111;
 }
 
-img{
+img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s;
 }
 
-img:hover{
+img:hover {
     transform: scale(1.1);
     cursor: pointer;
     box-shadow: 0 0 2px 2px rgb(0,0,0,0.9);
 }
 
-h2{
+h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;                                            
     margin: 15px 0 5px;
     font-size: 18px;
@@ -184,7 +153,7 @@ h2{
     color: #46a08c;
 }
 
-#contenedor-personajes .personaje h4{
+#contenedor-personajes .personaje h4 {
     color: #b6c9c5;
     padding:1px 0;
     font-family: sans-serif;
@@ -192,22 +161,29 @@ h2{
     font-size: 15px;
 }
 
-@keyframes loader{
+@keyframes loader {
     from{transform: translateY(0)}
     to{transform: translateY(-15px);}
 }
 
-@media (min-width: 768px) and (max-width: 1200px)
-{
-    body{
+@media (min-width: 768px) and (max-width: 1200px) {
+    body {
         background-size: cover;
-        background-position: left;
     }
+    
+    .contenedor-boton {
+        margin-top: 12rem;
+    }
+    
 }
 
-@media (min-width: 380px) and (max-width: 767px){
+@media screen and (max-width: 767px){
     body{
+        background-image: url(https://e0.pxfuel.com/wallpapers/592/677/desktop-wallpaper-daenerys-on-iron-throne-daenerys-dragon.jpg);
         background-size: cover;
-        background-position: left;
+    }
+
+    .contenedor-boton {
+        margin-top: 8rem;
     }
 }
